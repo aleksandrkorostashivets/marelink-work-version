@@ -1,0 +1,58 @@
+.footer {
+  color: #fff;
+  background-color: #000;
+  @include adaptiv-value("padding-top", 50, 20, 0);
+  @include adaptiv-value("padding-bottom", 30, 0, 0);
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    &:nth-child(1) {
+      border-bottom: 1px solid #a00106;
+    }
+  }
+
+  &__list {
+    li {
+      position: relative;
+      margin-bottom: 5px;
+      padding-left: 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        border-radius: 50px;
+        width: 10px;
+        height: 2px;
+        background-color: #a00106;
+        transform: translateY(-50%);
+      }
+
+      a {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+
+    &-item {
+      margin-left: 10px;
+
+      svg {
+        width: 30px;
+        height: 30px;
+        opacity: 0.7;
+        transition: opacity 0.3s ease-in;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

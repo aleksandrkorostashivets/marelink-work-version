@@ -1,0 +1,268 @@
+.article {
+  padding-top: 50px;
+
+  &__top {
+    border-top: 1px solid #cecece;
+    border-bottom: 1px solid #cecece;
+    @include adaptiv-value("padding-top", 30, 10, 0);
+    @include adaptiv-value("padding-bottom", 30, 10, 0);
+
+    &-data {
+      font-size: 0.8em;
+      color: #cecece;
+    }
+
+    &-title {
+      margin: 20px 0;
+      color: #142265;
+      @include adaptiv-font (30, 24);
+    }
+
+    &-text {
+      font-style: italic;
+      font-size: 0.9em;
+      color: #615f5f;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  &__image {
+    position: relative;
+    margin-bottom: 20px;
+
+    img {
+      position: relative;
+      max-width: 100%;
+    }
+  }
+
+  &__copyright {
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.664);
+  }
+
+  &__text {
+    display: block;
+    margin: 5px auto;
+    width: 35rem;
+    line-height: 1.5;
+    text-align: justify;
+    text-indent: 1.5em;
+    @include adaptiv-font (16, 14);
+  }
+}
+
+.news {
+  @include adaptiv-value("padding-top", 50, 30, 0);
+  @include adaptiv-value("padding-bottom", 50, 30, 0);
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__sponsored {
+    margin-right: 20px;
+    width: 60%;
+  }
+
+  &__related {
+    width: 40%;
+  }
+
+  &__title {
+    position: relative;
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: #142265;
+    @include adaptiv-font (26, 20);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 35%;
+      height: 2px;
+      background-color: #142265;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      width: 35%;
+      height: 6px;
+      background-color: #142265;
+    }
+  }
+}
+
+.sponsored {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #cecece;
+  padding: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    position: relative;
+    width: 280px;
+    height: 280px;
+
+    img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    width: 65%;
+  }
+
+  &__text {
+    margin: 10px 0;
+    color: #cecece;
+  }
+
+  &__title {
+    margin: 10px 0;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #142265;
+    @include adaptiv-font (22, 18);
+  }
+
+  &__descr {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #615f5f;
+    @include adaptiv-font (18, 16);
+  }
+
+  &__link {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-style: solid;
+      border-color: #a00106;
+      transition: all 0.3s ease-in;
+    }
+
+    &::before {
+      border-width: 2px 0 2px 0;
+      transform: scaleX(0);
+    }
+
+    &::after {
+      border-width: 0 2px 0 2px;
+      transform: scaleY(0);
+    }
+
+    &:hover {
+
+      &::before,
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.related {
+  position: relative;
+  border-bottom: 1px solid #cecece;
+  padding: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin: 10px 0;
+    color: #cecece;
+  }
+
+  &__title {
+    margin: 10px 0;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #142265;
+    @include adaptiv-font (22, 18);
+  }
+
+  &__descr {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #615f5f;
+    @include adaptiv-font (18, 16);
+  }
+
+  &__link {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #a00106;
+      transform: scale(0);
+      transition: all 0.3s ease-in;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #a00106;
+      transform: scale(0);
+      transition: all 0.3s ease-in;
+    }
+
+    &:hover {
+
+      &::before,
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+}
