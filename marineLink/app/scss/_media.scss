@@ -2,62 +2,60 @@
   .link__list {
     display: none;
   }
-}
 
-@media (max-width: 950px) {
   .header {
     border-bottom: transparent;
 
-    &:before {
-      content: '';
+    &::before {
+      content: "";
       position: absolute;
-      top: 0;
       left: 0;
+      top: 0;
+      z-index: 12;
       border-bottom: 3px solid #a00106;
       width: 100%;
       height: 100%;
       background-color: #fff;
-      z-index: 12;
     }
 
     &__burger {
-      display: block;
       position: relative;
+      z-index: 15;
+      display: block;
       width: 30px;
       height: 20px;
-      z-index: 15;
 
       span {
-        content: '';
+        content: "";
         position: absolute;
-        width: 100%;
-        height: 2px;
         left: 0;
         top: 9px;
-        background-color: #000;
-        transition: all .3s ease-in-out;
-      }
-
-      &:before {
-        content: '';
-        position: absolute;
         width: 100%;
         height: 2px;
+        background-color: #000;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
         left: 0;
         top: 0;
+        width: 100%;
+        height: 2px;
         background-color: #000;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
-        width: 100%;
-        height: 2px;
         left: 0;
         bottom: 0;
+        width: 100%;
+        height: 2px;
         background-color: #000;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
     }
 
@@ -66,8 +64,8 @@
     }
 
     &__logo {
-      margin-bottom: 0;
       z-index: 12;
+      margin-bottom: 0;
 
       img {
         height: 60px;
@@ -76,15 +74,15 @@
 
     &__menu {
       position: fixed;
-      top: -100%;
       left: 0;
+      top: -100%;
       z-index: 10;
+      overflow: auto;
+      padding-top: 100px;
       width: 100%;
       height: 100%;
       background-color: #fff;
-      padding-top: 100px;
-      overflow: auto;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
 
       &.active {
         top: 0;
@@ -105,31 +103,28 @@
       }
     }
 
-    &__phone {
-      background-color: transparent;
-      padding: 0;
-    }
-
     &__link {
+      margin: 0 0 20px;
       color: #000;
-      margin: 0 0 20px 0;
     }
 
     &__burger.active::before {
-      transform: rotate(45deg);
       top: 9px;
+      transform: rotate(45deg);
     }
 
     &__burger.active::after {
-      transform: rotate(-45deg);
       bottom: 9px;
+      transform: rotate(-45deg);
     }
 
     &__burger.active span {
       transform: scale(0);
     }
   }
+}
 
+@media (max-width: 950px) {
   body.lock {
     overflow: hidden;
   }
@@ -143,17 +138,6 @@
   .banner {
     display: block;
     margin: 20px auto;
-  }
-
-  .news {
-    &__row {
-      flex-direction: column;
-    }
-
-    &__sponsored,
-    &__related {
-      width: 100%;
-    }
   }
 }
 
@@ -209,6 +193,17 @@
 
     &__info {
       margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+
+  .related {
+    &__row {
+      flex-direction: column;
+    }
+
+    &__item {
+      margin: 0 0 10px;
       width: 100%;
     }
   }

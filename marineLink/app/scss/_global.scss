@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  position: relative;
   overflow-x: hidden;
   outline: none;
   min-width: 320px;
@@ -118,6 +119,48 @@ dd {
 
     &:hover {
       height: 100px;
+    }
+  }
+}
+
+.subscribe__btn {
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: transparent;
+  border-radius: 5px;
+  padding: 10px 0;
+  width: 200px;
+  box-shadow: 4px 10px 8px 0 rgba(20, 34, 101, 0.6);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #142265;
+  transition: all 0.3s ease-in;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    width: 0;
+    height: 100%;
+    background-color: #a00106;
+    transition: all 0.3s ease-in;
+  }
+
+  &:hover {
+    box-shadow: 4px 10px 8px 0 rgba(160, 1, 6, 0.6);
+    transform: scale(1.03);
+
+    &::after {
+      left: 0;
+      width: 100%;
     }
   }
 }

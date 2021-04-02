@@ -1,6 +1,12 @@
 .article {
   padding-top: 50px;
 
+  &__container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1064px;
+  }
+
   &__top {
     border-top: 1px solid #cecece;
     border-bottom: 1px solid #cecece;
@@ -67,16 +73,12 @@
 
   &__row {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
   }
 
   &__sponsored {
-    margin-right: 20px;
-    width: 60%;
-  }
-
-  &__related {
-    width: 40%;
+    width: 100%;
   }
 
   &__title {
@@ -197,41 +199,20 @@
 }
 
 .related {
-  position: relative;
-  border-bottom: 1px solid #cecece;
-  padding: 10px;
-
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  &__text {
-    margin: 10px 0;
-    color: #cecece;
-  }
-
-  &__title {
-    margin: 10px 0;
-    line-height: 1.5;
-    text-transform: uppercase;
-    color: #142265;
-    @include adaptiv-font (22, 18);
-  }
-
-  &__descr {
-    margin: 10px 0;
-    line-height: 1.5;
-    color: #615f5f;
-    @include adaptiv-font (18, 16);
-  }
-
-  &__link {
-    position: absolute;
-    left: 0;
-    bottom: 0;
+  &__row {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: 100%;
-    transition: all 0.3s ease-in;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border-bottom: 1px solid #cecece;
+    padding: 10px;
+    width: 45%;
 
     &::before {
       content: "";
@@ -264,5 +245,38 @@
         transform: scale(1);
       }
     }
+
+    &-info {
+      margin-right: 10px;
+      width: 60%;
+    }
+
+    &-image {
+      width: 40%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &-title {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #142265;
+      transition: color 0.3s ease-in;
+      @include adaptiv-font (20, 16);
+
+      &:hover {
+        color: #a00106;
+      }
+    }
+
+    &-text {
+      font-size: 0.8em;
+      color: #cecece;
+    }
   }
+
+
 }

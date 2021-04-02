@@ -11,7 +11,6 @@
 <body>
     <div class="wrapper">
         <header class="header" id="header">
-            <a href="#" class="header__btn">Subscribe</a>
             <div class="header__body">
                 <a href="./index.html" class="logo header__logo">
                     <img src="./img/logo.png" alt="Maritime News">
@@ -44,7 +43,7 @@
         </div>
         <main class="page">
             <section class="article">
-                <div class="container">
+                <div class="article__container">
                     <div class="article__top">
                         <p class="article__top-data">March 26, 2021</p>
                         <h1 class="article__top-title">LNG-electric Tugs Ordered to Service the LNG Canada Project</h1>
@@ -141,7 +140,7 @@
                 </div>
             </section>
             <section class="news">
-                <div class="container">
+                <div class="article__container">
                     <div class="news__row">
                         <div class="news__sponsored">
                             <h2 class="news__title">Sponsored Content</h2>
@@ -193,41 +192,57 @@
                         </div>
                         <div class="news__related">
                             <h2 class="news__title">Related News</h2>
-                            <div class="news__related-item related">
-                                <p class="related__text">31 Mar 2021</p>
-                                <h3 class="related__title">Investigation Begins Into How Ever Given Got Stuck in Suez
-                                    Canal</h3>
-                                <p class="related__descr">Formal investigations into how the giant container ship Ever
-                                    Given ran aground in the Suez Canal, shutting down shipping in the major global
-                                    waterway</p>
-                                <a href="#" class="related__link"></a>
+                            <div class="related__row">
+                                <div class="related__item">
+                                    <div class="related__item-info">
+                                        <a href="#" class="related__item-title">
+                                            Italy Approves Decree to Keep Ships Out of Venice Lagoon
+                                        </a>
+                                        <p class="related__item-text">Angelo Amante April 1, 2021</p>
+                                    </div>
+                                    <div class="related__item-image">
+                                        <img src="https://images.marinelink.com/images/maritime/w400/oleg-znamenskiy-adobe-stock-121588.jpeg"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="related__item">
+                                    <div class="related__item-info">
+                                        <a href="#" class="related__item-title">
+                                            Italy Approves Decree to Keep Ships Out of Venice Lagoon
+                                        </a>
+                                        <p class="related__item-text">Angelo Amante April 1, 2021</p>
+                                    </div>
+                                    <div class="related__item-image">
+                                        <img src="https://images.marinelink.com/images/maritime/w400/oleg-znamenskiy-adobe-stock-121588.jpeg"
+                                            alt="">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="news__related-item related">
-                                <p class="related__text">31 Mar 2021</p>
-                                <h3 class="related__title">Investigation Begins Into How Ever Given Got Stuck in Suez
-                                    Canal</h3>
-                                <p class="related__descr">Formal investigations into how the giant container ship Ever
-                                    Given ran aground in the Suez Canal, shutting down shipping in the major global
-                                    waterway</p>
-                                <a href="#" class="related__link"></a>
-                            </div>
-                            <div class="news__related-item related">
-                                <p class="related__text">31 Mar 2021</p>
-                                <h3 class="related__title">Investigation Begins Into How Ever Given Got Stuck in Suez
-                                    Canal</h3>
-                                <p class="related__descr">Formal investigations into how the giant container ship Ever
-                                    Given ran aground in the Suez Canal, shutting down shipping in the major global
-                                    waterway</p>
-                                <a href="#" class="related__link"></a>
-                            </div>
-                            <div class="news__related-item related">
-                                <p class="related__text">31 Mar 2021</p>
-                                <h3 class="related__title">Investigation Begins Into How Ever Given Got Stuck in Suez
-                                    Canal</h3>
-                                <p class="related__descr">Formal investigations into how the giant container ship Ever
-                                    Given ran aground in the Suez Canal, shutting down shipping in the major global
-                                    waterway</p>
-                                <a href="#" class="related__link"></a>
+                            <div class="related__row">
+                                <div class="related__item">
+                                    <div class="related__item-info">
+                                        <a href="#" class="related__item-title">
+                                            Italy Approves Decree to Keep Ships Out of Venice Lagoon
+                                        </a>
+                                        <p class="related__item-text">Angelo Amante April 1, 2021</p>
+                                    </div>
+                                    <div class="related__item-image">
+                                        <img src="https://images.marinelink.com/images/maritime/w400/oleg-znamenskiy-adobe-stock-121588.jpeg"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="related__item">
+                                    <div class="related__item-info">
+                                        <a href="#" class="related__item-title">
+                                            Italy Approves Decree to Keep Ships Out of Venice Lagoon
+                                        </a>
+                                        <p class="related__item-text">Angelo Amante April 1, 2021</p>
+                                    </div>
+                                    <div class="related__item-image">
+                                        <img src="https://images.marinelink.com/images/maritime/w400/oleg-znamenskiy-adobe-stock-121588.jpeg"
+                                            alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -312,6 +327,7 @@
                 </div>
             </div>
         </footer>
+        <a href="#" class="subscribe__btn">Subscribe</a>
     </div>
     <script src="js/libs.min.js"></script>
     <script src="js/main.min.js"></script>
