@@ -90,7 +90,7 @@ dd {
   transition: color 0.3s ease-in;
 
   &:hover {
-    color: #a00106;
+    color: $hover-color;
   }
 }
 
@@ -139,7 +139,7 @@ dd {
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
-  background-color: #142265;
+  background-color: $link-color;
   transition: all 0.3s ease-in;
 
   &::after {
@@ -150,7 +150,7 @@ dd {
     z-index: -1;
     width: 0;
     height: 100%;
-    background-color: #a00106;
+    background-color: $hover-color;
     transition: all 0.3s ease-in;
   }
 
