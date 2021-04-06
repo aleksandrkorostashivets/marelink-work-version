@@ -48,12 +48,8 @@
   }
 
   &__copyright {
-    position: absolute;
-    left: 0;
-    bottom: 2px;
-    padding: 10px;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.664);
+    font-weight: 700;
+    color: $secondary-color;
   }
 
   &__text {
@@ -64,6 +60,24 @@
     text-align: justify;
     text-indent: 1.5em;
     @include adaptiv-font (18, 16);
+  }
+
+  &__content {
+    width: 60%;
+  }
+
+  &__slider {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+
+    &-text {
+      margin: 10px 0 0;
+      line-height: 1.5;
+      text-align: justify;
+      color: $secondary-color;
+      @include adaptiv-font (16, 14);
+    }
   }
 }
 

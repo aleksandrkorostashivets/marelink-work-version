@@ -80,12 +80,12 @@ dd {
   max-width: 1630px;
 }
 
-.swiper-container {
+.hero__slider .swiper-container {
   height: 100%;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.hero__slider .swiper-button-next,
+.hero__slider .swiper-button-prev {
   color: #fff;
   transition: color 0.3s ease-in;
 
@@ -94,7 +94,17 @@ dd {
   }
 }
 
-.swiper-slide {
+.article__slider .swiper-button-next,
+.article__slider .swiper-button-prev {
+  color: $link-color;
+  transition: color 0.3s ease-in;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.hero__slider .swiper-slide {
   position: relative;
 
   &__image {
@@ -121,6 +131,17 @@ dd {
       height: 100px;
     }
   }
+}
+
+.article__slider .swiper-slide {
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+.article__slider .swiper-container {
+  height: 100%;
 }
 
 .subscribe__btn {

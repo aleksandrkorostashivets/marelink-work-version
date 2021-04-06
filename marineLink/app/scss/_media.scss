@@ -133,6 +133,9 @@
     &__row {
       flex-direction: column;
     }
+    &__content {
+      width: 100%;
+    }
   }
 
   .banner {

@@ -13,18 +13,21 @@ function myFunction() {
 }
 
 var swiper = new Swiper('.swiper-container', {
+  autoHeight: true,
   spaceBetween: 30,
   centeredSlides: true,
   loop: true,
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: false,
-  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+    },
+  }
 });
+
 
 
 let header__burger = document.querySelector('.header__burger');
